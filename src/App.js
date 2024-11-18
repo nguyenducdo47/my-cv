@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Resume from './components/Resume';
 import Header from './components/Header';
-import DarkModeToggle from './components/DarkModeToggle';
 import Loading from './components/Loading';
-import Seo from './components/Seo';  // Import Loading Component
+import Seo from './components/Seo'; 
+import LanguageSwitcher from './components/LanguageSwitcher';
 import './App.css'; 
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Giả lập tải dữ liệu hoặc delay
@@ -23,7 +25,7 @@ const App = () => {
         <Loading />
       ) : (
         <>
-          <DarkModeToggle />
+          <LanguageSwitcher />
           <Header />
           <Resume />
         </>

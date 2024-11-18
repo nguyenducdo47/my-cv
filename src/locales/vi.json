@@ -1,0 +1,174 @@
+{
+    "profile": {
+        "title": "Thông tin",
+        "name": "Nguyễn Đức Độ",
+        "description": "Lập trình viên Web FullStack",
+        "date_of_birth": "21/05/2001",
+        "phone": "0899068281",
+        "email": "nguyenducdo009@gmail.com",
+        "address": "Đường Cao Lỗ, Phường 4, Quận 8, Thành phố Hồ Chí Minh",
+        "github": "nguyenducdo47",
+        "avatar": "/images/avatar.jpg"
+    },
+    "objective": {
+        "title": "Mục Tiêu Nghề Nghiệp",
+        "short_term": "Nâng cao kỹ năng phát triển web và thành thạo các công nghệ frontend và backend để tạo ra các website hiện đại và hiệu quả.",
+        "long_term": "Trở thành chuyên gia phát triển web full-stack, dẫn dắt các dự án lớn và đóng góp vào chiến lược phát triển sản phẩm của công ty."
+    },
+    "education": {
+        "title": "Học Vấn",
+        "university": "Đại học Công Nghệ Sài Gòn",
+        "years": "2019 - Hiện tại",
+        "major": "Công nghệ thông tin"
+    },
+    "work_experience": [
+        {
+            "title": "Kinh nghiệm làm việc"
+        },
+        {
+            "company": "Công ty Cổ phần Công nghệ Apps Cyclone",
+            "period": "08/2024 - 10/2024",
+            "position": "Vị trí: Thực tập sinh Backend (Laravel)",
+            "responsibilities": [
+                "Học cấu trúc của một dự án Laravel và xây dựng một dự án đơn giản.",
+                "Phân tích website và yêu cầu được cung cấp bởi leader.",
+                "Phối hợp với các thành viên trong nhóm để hoàn thành dự án.",
+                "Xây dựng các API cho dự án.",
+                "Tối ưu hóa mã nguồn và kiểm tra toàn bộ chức năng.",
+                "Sử dụng Docker để xây dựng dự án."
+            ]
+        },
+        {
+            "company": "Dịch vụ IT Kiên Giang",
+            "period": "05/2023 - 07/2023",
+            "position": " Vị trí: Thực tập sinh Backend (ASP.NET, Automation Test)",
+            "responsibilities": [
+                "Phát triển API: Thiết kế và triển khai API RESTful bằng ASP.NET kết nối với SQL Server, phục vụ yêu cầu của khách hàng và ứng dụng nội bộ.",
+                "Kiểm tra API: Sử dụng Postman để kiểm tra và xác minh API, viết các trường hợp kiểm tra và đảm bảo tính chính xác và bảo mật.",
+                "Bảo trì và tối ưu hóa: Chịu trách nhiệm bảo trì và cải tiến API hiện có, nâng cao hiệu suất và tính ổn định của hệ thống.",
+                "Hợp tác nhóm: Làm việc chặt chẽ với nhóm phát triển frontend, backend và các bên liên quan để đảm bảo dự án hoàn thành đúng thời hạn và yêu cầu.",
+                "Quản lý mã nguồn: Sử dụng Git để quản lý mã nguồn, xử lý branch, merge và giải quyết xung đột mã nguồn."
+            ]
+        }
+    ],
+    "skills": {
+        "title": "Kỹ năng",
+        "frontend": [
+            "ReactJS, TypeScript, VueJS",
+            "JavaScript",
+            "JQuery, Ajax",
+            "HTML, CSS (SCSS)",
+            "Bootstrap, TailwindCSS",
+            "Blade Template Laravel"
+        ],
+        "backend": [
+            "PHP Laravel",
+            "NodeJS",
+            "ASP.NET Core API"
+        ],
+        "programming_languages": [
+            "C++",
+            "C#",
+            "Java (Spring Boot, JSP)"
+        ],
+        "database": [
+            "MySQL",
+            "SQL Server",
+            "MongoDB"
+        ]
+    },
+    "tools": {
+        "title": "Công cụ",
+        "tool": [
+            "Git - GitLab",
+            "Postman",
+            "Jira",
+            "Docker"
+        ]
+    },
+    "projects": [
+        {
+            "title": "Các Dự Án Cá Nhân"
+        },
+        {
+            "name": "Website thương mại điện tử bán quần áo thời trang nam nữ",
+            "description": "Thiết kế website thương mại điện tử sử dụng framework Laravel, kết nối cơ sở dữ liệu MySQL, sử dụng HTML5, CSS, JavaScript, JQuery, Ajax và tích hợp VNPAY, MOMO để thanh toán điện tử.",
+            "framework": "Laravel",
+            "period": "08/2024 - 11/2024",
+            "details": {
+                "github_link": "https://github.com/nguyenducdo47/selling-men-and-women-fashion-clothes",
+                "demo_link": "./videos/demo-flatshop.mkv",
+                "team_size": "Số lượng thành viên: 1 (dự án tự học, cá nhân)",
+                "technical_stack": {
+                    "title": "Công nghệ sử dụng",
+                    "framework": "Laravel",
+                    "frontend": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "JQuery",
+                        "Ajax"
+                    ],
+                    "database": "MySQL"
+                },
+                "features": {
+                    "title": "Chức năng",
+                    "feature": [
+                        "Lọc, tìm kiếm và so sánh sản phẩm dành cho khách hàng.",
+                        "Đăng ký và đăng nhập tài khoản cho người dùng.",
+                        "Quản lý đơn hàng, theo dõi đơn hàng và chức năng giỏ hàng.",
+                        "Trang quản trị với các chức năng quản lý sản phẩm, danh mục, khuyến mãi và người dùng."
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Website thương mại điện tử bán quần áo trẻ em",
+            "description": "Thiết kế website thương mại điện tử sử dụng framework Laravel, kết nối cơ sở dữ liệu MySQL, sử dụng HTML5, CSS, JavaScript, JQuery, Ajax và tích hợp VNPAY để thanh toán điện tử.",
+            "framework": "Laravel",
+            "period": "08/2023 - 11/2023",
+            "details": {
+                "github_link": "https://github.com/nguyenducdo47/shop_selling_clothes",
+                "demo_link": "./videos/demo-kidolshop.mkv",
+                "team_size": "Số lượng thành viên: 1 (dự án tự học, cá nhân)",
+                "technical_stack": {
+                    "title": "Công nghệ sử dụng",
+                    "framework": "Laravel",
+                    "frontend": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "JQuery",
+                        "Ajax"
+                    ],
+                    "database": "MySQL"
+                },
+                "features": {
+                    "title": "Chức năng",
+                    "feature": [
+                        "Lọc, tìm kiếm và so sánh sản phẩm dành cho khách hàng.",
+                        "Đăng ký và đăng nhập tài khoản cho người dùng.",
+                        "Quản lý đơn hàng, theo dõi đơn hàng và chức năng giỏ hàng.",
+                        "Trang quản trị với các chức năng quản lý sản phẩm, danh mục, khuyến mãi và người dùng."
+                    ]
+                }
+            }
+        }
+    ],
+    "english": {
+        "title": "Ngoại ngữ",
+        "certification": " Bằng tiếng anh B1",
+        "skills": "Đọc hiểu tài liệu lập trình"
+    },
+    "certificate": [
+        {
+            "title": "Chứng chỉ"
+        },
+        {
+            "name": "Công ty Cổ phần Công nghệ Apps Cyclone",
+            "description": "Chứng chỉ được trao tặng vì có thành tích xuất sắc tại AppsCyclone.",
+            "imgSrc": "./images/appscyclone.png",
+            "imgAlt": "Chứng chỉ AppsCyclone"
+        }
+    ]
+}

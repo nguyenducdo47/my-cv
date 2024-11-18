@@ -242,4 +242,127 @@ body.dark-mode .close-btn {
     list-style-type: disc;
   }
 
-  
+  /* From Uiverse.io by Pradeepsaranbishnoi */ 
+.tabs {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
+}
+
+.tabs * {
+  z-index: 2;
+}
+
+.container2 input[type="radio"] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 50px;
+  font-size: .8rem;
+  color: black;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: .8rem;
+  height: .8rem;
+  position: absolute;
+  top: 10px;
+  left: 30%;
+  font-size: 10px;
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  margin: 0px;
+  background-color: #e6eef9;
+  transition: 0.15s ease-in;
+}
+
+.container2 .language-selector input[type="radio"]:checked + label {
+  color: #185ee0;
+}
+
+.container2 .language-selector input[type="radio"]:checked + label > .notification {
+  background-color: #185ee0;
+  color: #fff;
+  margin: 0px;
+}
+
+.container2 input[id="radio-en"]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+.container2 input[id="radio-vi"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 30px;
+  width: 50px;
+  background-color: #e6eef9;
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+ 
+  .tabs {
+    transform: scale(0.6);
+  }
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+}
+
+.language-selector input {
+  margin-right: 10px;
+}
+
+.dark-mode-toggle {
+  margin-left: 20px;
+}
+
+/* Tabs trong chế độ tối */
+body.dark-mode .tabs {
+  background-color: #181717;
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.15), 0 6px 12px 0 rgb(110 104 104 / 15%)
+}
+
+body.dark-mode .tab {
+  color: white;
+}
+
+body.dark-mode .tab:hover {
+  color: #bb86fc;
+}

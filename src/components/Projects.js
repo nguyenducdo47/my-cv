@@ -1,28 +1,33 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';  // Import useTranslation để lấy dữ liệu ngôn ngữ
 import Modal from './Modal';
 import '../App.css';
-import data from '../data/user';
 
 const Projects = () => {
+  const { t } = useTranslation();
+  const projects = t('projects', { returnObjects: true }); // Bỏ qua phần tử đầu tiên
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [videoSrc, setVideoSrc] = useState('');
   const [modalText, setModalText] = useState('');
-  
-  const toggleModal = (src,text) => {
+
+  const toggleModal = (src, text) => {
     setVideoSrc(src);
     setModalText(text);
     setIsModalOpen(!isModalOpen);
   };
 
-  const renderProjects = data.projects.map((project, index) => (
+  // Render các dự án
+  const renderProjects = projects.slice(1).map((project, index) => (
     <div className="mb-3" key={index}>
-      <h3>
-        {project.name} using {project.framework} | ({project.period})
+      <h3 className='text-capitalize'>
+        {project.name} | {project.period}
       </h3>
-      <p><i>{project.description}</i></p>
+      <p className='text-capitalize'><i>{project.description}</i></p>
       <ol>
         <li>
-          Link Github:&nbsp;
+          {t('Github link')}:&nbsp;
+          {project.github_link}
           <a
             href={project.details.github_link}
             target="_blank"
@@ -32,29 +37,28 @@ const Projects = () => {
           </a>
         </li>
         <li
-          onClick={() => toggleModal(project.details.demo_link, `Demo video about ${project.name}.`)}
+          onClick={() => toggleModal(project.details.demo_link, project.name)}
           style={{ cursor: 'pointer' }}
         >
-          Demo: click here
+          {t('Demo')}
         </li>
         <li>
-          Team size: {project.details.team_size}
+          {project.details.team_size}
         </li>
         <li>
-          Technical stack:
-          <ul className='bullet-list'>
-            <li>Framework: {project.details.technical_stack.framework}</li>
-            <li>Frontend: {project.details.technical_stack.frontend.join(', ')}</li>
-            <li>Database: {project.details.technical_stack.database}</li>
+          {project.details.technical_stack.title}:
+          <ul className="bullet-list">
+            <li>{t('Framework')}: {project.details.technical_stack.framework}</li>
+            <li>{t('Frontend')}: {project.details.technical_stack.frontend.join(', ')}</li>
+            <li>{t('Database')}: {project.details.technical_stack.database}</li>
           </ul>
         </li>
         <li>
-          Features:
+          {project.details.features?.title}:
+          {/* Kiểm tra xem features có tồn tại và có phải là mảng không */}
           <ul style={{ listStyleType: 'lower-alpha' }}>
-            {project.details.features.map((feature, idx) => (
-              <li key={idx}>
-                {feature}
-              </li>
+            {(Array.isArray(project.details.features?.feature) ? project.details.features.feature : []).map((feature, idx) => (
+              <li key={idx}>{feature}</li>
             ))}
           </ul>
         </li>
@@ -65,9 +69,10 @@ const Projects = () => {
   return (
     <section className="mb-4">
       <hr />
-      <h2 className="mt-4 text-primary">Projects</h2>
+      <h2 className="mt-4 text-primary text-capitalize">{projects[0]?.title}</h2>
       {renderProjects}
-      
+
+      {/* Modal component */}
       <Modal
         isOpen={isModalOpen}
         toggleModal={() => toggleModal('', '')}

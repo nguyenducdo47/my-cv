@@ -1,15 +1,17 @@
 import React from 'react';
-import data from '../data/user';
+import { useTranslation } from 'react-i18next'; 
 
 const English = () => {
-  const { certification, skills } = data.english; // Lấy dữ liệu từ JSON
+  const { t } = useTranslation();
+
+  const english = t('english', { returnObjects: true }); // Lấy dữ liệu từ file locale
 
   return (
     <div>
-      <h4 className="mt-4 text-primary">English</h4>
+      <h4 className="mt-4 text-primary">{english.title}</h4>
       <ul>
-        <li>Certification: {certification}</li>
-        <li>{skills}</li>
+        <li>{english.certification}</li>
+        <li>{english.skills}</li>
       </ul>
     </div>
   );

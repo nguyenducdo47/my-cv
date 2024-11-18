@@ -1,12 +1,19 @@
 import React from 'react';
-import data from '../data/user';
-const Education = () => (
-  <section className="mb-4">
-    <hr />
-    <h2 className="mt-4 text-primary">Education</h2>
-    <p><strong>{data.education.university}</strong> ({data.education.years})</p>
-    <p>{data.education.major}</p>
-  </section>
-);
+import { useTranslation } from 'react-i18next'; 
+
+const Education = () => {
+  const { t } = useTranslation();
+
+  const education = t('education', { returnObjects: true });
+
+  return (
+    <section className="mb-4">
+      <hr />
+      <h2 className="mt-4 text-primary">{education.title}</h2>
+      <p><strong>{education.university}</strong> ({education.years})</p>
+      <p>{education.major}</p>
+    </section>
+  );
+};
 
 export default Education;

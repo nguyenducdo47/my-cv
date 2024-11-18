@@ -7,7 +7,7 @@ import Certificate from './Certificate';
 
 
 const Sidebar = () => (
-    <div className="p-4 rounded sidebar bg-light1">
+    <div className="p-4 rounded sidebar bg-light1 text-capitalize">
         <Profile />
         <Skills />
         <Tools />
