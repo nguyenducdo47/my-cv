@@ -6,7 +6,8 @@ const data ={
     "phone": "0899068281",
     "email": "nguyenducdo009@gmail.com",
     "address": "Cao Lo Street, Ward 4, District 8, Ho Chi Minh City",
-    "github": "nguyenducdo47"
+    "github": "nguyenducdo47",
+    "avatar":"/images/avatar.jpg"
   },
   "objective": {
     "short_term": "Improve web development skills and master frontend and backend technologies to create modern and efficient websites.",

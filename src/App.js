@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Resume from './components/Resume';
 import Header from './components/Header';
 import DarkModeToggle from './components/DarkModeToggle';
-import Loading from './components/Loading';  // Import Loading Component
+import Loading from './components/Loading';
+import Seo from './components/Seo';  // Import Loading Component
 import './App.css'; 
 
 const App = () => {
@@ -17,9 +18,9 @@ const App = () => {
 
   return (
     <div className="container mt-5 full-width">
-      {/* Hiển thị Loading nếu đang tải, nếu không thì hiển thị tất cả component */}
+      <Seo/>
       {isLoading ? (
-        <Loading />  // Hiển thị loading khi đang tải
+        <Loading />
       ) : (
         <>
           <DarkModeToggle />

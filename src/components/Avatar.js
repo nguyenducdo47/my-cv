@@ -3,11 +3,10 @@ import data from '../data/user';
 const Avatar = () => (
   <img
     className="mb-3 rounded-circle"
-    src="/images/avatar.jpg"
-    alt="Profile Picture"
+    src={data.profile.avatar}
     width="150"
     height="150"
-    alt="Duc Do Nguyen"
+    alt={data.profile.name}
   />
 );
 
