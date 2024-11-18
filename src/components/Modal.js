@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, children }) => {
-  if (!isOpen) return null; // Không hiển thị nếu isOpen = false
+  if (!isOpen) return null;
 
   const handleOutsideClick = (e) => {
     if (e.target.id === "modal") {
-      toggleModal(); // Đóng modal khi click ngoài modal-content
+      toggleModal();
     }
   };
 
@@ -14,7 +14,7 @@ const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, child
       id="modal" 
       className="modal" 
       style={styles.modal}
-      onClick={handleOutsideClick} // Đóng modal khi click ngoài modal-content
+      onClick={handleOutsideClick}
     >
       <div className="modal-content" style={styles.modalContent}>
         <span
@@ -24,10 +24,8 @@ const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, child
         >
           &times;
         </span>
-        {/* Hiển thị nội dung text */}
         {children && <div style={styles.modalBody}>{children}</div>}
         
-        {/* Hiển thị hình ảnh nếu có */}
         {imgSrc && (
           <img
             src={imgSrc}
@@ -36,7 +34,6 @@ const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, child
           />
         )}
 
-        {/* Hiển thị video nếu có */}
         {videoSrc && (
           <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
             <source src={videoSrc} type={videoType} />
@@ -50,7 +47,6 @@ const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, child
   );
 };
 
-// Style cho Modal
 const styles = {
   modal: {
     position: 'fixed',

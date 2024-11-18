@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
 
-    // Kiểm tra khi người dùng cuộn trang để hiển thị hoặc ẩn nút
     const handleScroll = () => {
         if (window.scrollY > 300) {
             setIsVisible(true);
@@ -12,19 +11,16 @@ const ScrollToTopButton = () => {
         }
     };
 
-    // Thực hiện cuộn lên đầu trang khi nút được nhấn
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth', // Cuộn mượt mà
+            behavior: 'smooth', 
         });
     };
 
-    // Thêm sự kiện cuộn
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
-        // Dọn dẹp sự kiện khi component bị hủy
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -35,7 +31,7 @@ const ScrollToTopButton = () => {
                 bottom: '30px',
                 right: '30px',
                 zIndex: 1000,
-                display: isVisible ? 'block' : 'none', // Hiển thị khi cuộn xuống đủ
+                display: isVisible ? 'block' : 'none', 
             }}
         >
             <button

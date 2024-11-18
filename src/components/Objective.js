@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next'; // Import hook đa ngôn ngữ
+import { useTranslation } from 'react-i18next'; 
 
 const Objective = () => {
-  const { t } = useTranslation(); // Sử dụng hook t để dịch
+  const { t } = useTranslation(); 
 
   return (
     <section className="mb-4">

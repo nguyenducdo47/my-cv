@@ -18,16 +18,14 @@ const Certificate = () => {
     setSelectedCertificate(null);
   };
 
-  // Lấy title từ phần tử đầu tiên của mảng certificate
   const title = data.certificate[0]?.title || '';
 
-  // Lấy danh sách chứng chỉ (bỏ phần tử đầu tiên)
   const certificates = data.certificate.slice(1);
 
   return (
     <div>
       <h4 className="mt-4 text-primary">{title}</h4>
-      {certificates.length > 0 ? ( // Kiểm tra nếu có chứng chỉ để hiển thị
+      {certificates.length > 0 ? ( 
         <ul>
           {certificates.map((cert, index) => (
             <li key={index}>
@@ -44,7 +42,7 @@ const Certificate = () => {
           ))}
         </ul>
       ) : (
-        <p>No certificates available.</p> // Hiển thị thông báo nếu không có chứng chỉ
+        <p>No certificates available.</p>
       )}
       {selectedCertificate && (
         <Modal

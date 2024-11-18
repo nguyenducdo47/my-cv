@@ -1,23 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css'; // Đảm bảo rằng bạn có các lớp CSS cho dark mode
+import '../App.css';
 
 const DarkModeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Load chế độ hiện tại từ localStorage (nếu có)
-  useEffect(() => {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
-    if (savedMode) {
-      setIsDarkMode(savedMode === 'true');
-    }
-  }, []);
+    return savedMode === 'true';
+  });
 
-  // Thay đổi chế độ sáng/tối
-  const handleToggle = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  // Lưu trạng thái vào localStorage
   useEffect(() => {
     localStorage.setItem('darkMode', isDarkMode.toString());
     if (isDarkMode) {
@@ -25,7 +14,11 @@ const DarkModeToggle = () => {
     } else {
       document.body.classList.remove('dark-mode');
     }
-  }, [isDarkMode]);
+  }, [isDarkMode]); 
+  
+  const handleToggle = () => {
+    setIsDarkMode(prevMode => !prevMode);
+  };
 
   return (
     <label className="ui-switch">

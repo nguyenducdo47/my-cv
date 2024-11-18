@@ -1,21 +1,21 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import DarkModeToggle from './DarkModeToggle';
 
 const LanguageSwitcher = () => {
   const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState('en'); 
 
   useEffect(() => {
-    // Lấy ngôn ngữ từ localStorage hoặc mặc định là tiếng Anh
     const savedLanguage = localStorage.getItem('language') || 'en';
-    i18n.changeLanguage(savedLanguage);
+    setLanguage(savedLanguage);
+    i18n.changeLanguage(savedLanguage); 
   }, [i18n]);
 
   const handleLanguageChange = (e) => {
     const selectedLanguage = e.target.value;
-    // Lưu ngôn ngữ vào localStorage
     localStorage.setItem('language', selectedLanguage);
-    // Cập nhật ngôn ngữ trên trang
+    setLanguage(selectedLanguage);
     i18n.changeLanguage(selectedLanguage);
   };
 
@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
             name="language"
             value="en"
             onChange={handleLanguageChange}
-            defaultChecked
+            checked={language === 'en'} 
           />
           <label className="tab" htmlFor="radio-en">{t('Eng')}</label>
 
@@ -39,6 +39,7 @@ const LanguageSwitcher = () => {
             name="language"
             value="vi"
             onChange={handleLanguageChange}
+            checked={language === 'vi'}
           />
           <label className="tab" htmlFor="radio-vi">{t('VN')}</label>
         </div>

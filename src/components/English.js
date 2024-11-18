@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 const English = () => {
   const { t } = useTranslation();
 
-  const english = t('english', { returnObjects: true }); // Lấy dữ liệu từ file locale
+  const english = t('english', { returnObjects: true });
 
   return (
     <div>

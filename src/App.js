@@ -12,10 +12,9 @@ const App = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // Giả lập tải dữ liệu hoặc delay
     setTimeout(() => {
-      setIsLoading(false); // Sau khi tải xong, ẩn loading
-    }, 1000); // 3 giây
+      setIsLoading(false);
+    }, 500);
   }, []);
 
   return (

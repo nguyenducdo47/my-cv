@@ -1,11 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next'; // Import hook để sử dụng i18n
+import { useTranslation } from 'react-i18next'; 
 import '../App.css';
 
 const Profile = () => {
-  const { t } = useTranslation(); // Khởi tạo hook t để lấy dữ liệu từ file locale
+  const { t } = useTranslation(); 
 
-  const profile = t('profile', { returnObjects: true }); // Lấy dữ liệu profile từ file locale
+  const profile = t('profile', { returnObjects: true }); 
 
   return (
     <div>

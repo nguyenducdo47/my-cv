@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';  // Import useTranslation để lấy dữ liệu ngôn ngữ
+import { useTranslation } from 'react-i18next'; 
 import Modal from './Modal';
 import '../App.css';
 
 const Projects = () => {
   const { t } = useTranslation();
-  const projects = t('projects', { returnObjects: true }); // Bỏ qua phần tử đầu tiên
+  const projects = t('projects', { returnObjects: true });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [videoSrc, setVideoSrc] = useState('');
@@ -17,7 +17,6 @@ const Projects = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  // Render các dự án
   const renderProjects = projects.slice(1).map((project, index) => (
     <div className="mb-3" key={index}>
       <h3 className='text-capitalize'>
@@ -55,7 +54,6 @@ const Projects = () => {
         </li>
         <li>
           {project.details.features?.title}:
-          {/* Kiểm tra xem features có tồn tại và có phải là mảng không */}
           <ul style={{ listStyleType: 'lower-alpha' }}>
             {(Array.isArray(project.details.features?.feature) ? project.details.features.feature : []).map((feature, idx) => (
               <li key={idx}>{feature}</li>
@@ -72,7 +70,6 @@ const Projects = () => {
       <h2 className="mt-4 text-primary text-capitalize">{projects[0]?.title}</h2>
       {renderProjects}
 
-      {/* Modal component */}
       <Modal
         isOpen={isModalOpen}
         toggleModal={() => toggleModal('', '')}
