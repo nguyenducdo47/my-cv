@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Resume from './components/Resume';
+import Header from './components/Header';
+import DarkModeToggle from './components/DarkModeToggle';
+import Loading from './components/Loading';  // Import Loading Component
+import './App.css'; 
 
-function App() {
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Giả lập tải dữ liệu hoặc delay
+    setTimeout(() => {
+      setIsLoading(false); // Sau khi tải xong, ẩn loading
+    }, 1000); // 3 giây
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-5 full-width">
+      {/* Hiển thị Loading nếu đang tải, nếu không thì hiển thị tất cả component */}
+      {isLoading ? (
+        <Loading />  // Hiển thị loading khi đang tải
+      ) : (
+        <>
+          <DarkModeToggle />
+          <Header />
+          <Resume />
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;
