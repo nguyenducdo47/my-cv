@@ -1,7 +1,7 @@
 const data ={
   "profile": {
     "name": "Duc Do Nguyen",
-    "title": "Full-Stack Web Developer",
+    "title": "FullStack Web Developer",
     "date_of_birth": "21/05/2001",
     "phone": "0899068281",
     "email": "nguyenducdo009@gmail.com",
