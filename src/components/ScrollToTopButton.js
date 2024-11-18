@@ -30,7 +30,7 @@ const ScrollToTopButton = () => {
                 position: 'fixed',
                 bottom: '30px',
                 right: '30px',
-                zIndex: 1000,
+                zIndex: 99,
                 display: isVisible ? 'block' : 'none', 
             }}
         >

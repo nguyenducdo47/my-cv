@@ -259,9 +259,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 25px;
   height: 30px;
   width: 50px;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: black;
   font-weight: 500;
   border-radius: 99px;
@@ -357,6 +358,10 @@ body.dark-mode .tab {
 
 body.dark-mode .tab:hover {
   color: #bb86fc;
+}
+
+.border-circle {
+  border: 3px solid #d8f4f5 !important;
 }
 
 /*# sourceMappingURL=App.css.map */

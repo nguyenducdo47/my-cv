@@ -32,7 +32,7 @@ const Certificate = () => {
               <p
                 style={{
                   cursor: 'pointer',
-                  color: 'blue',
+                  color: '#6262ea',
                 }}
                 onClick={() => openModal(cert)}
               >

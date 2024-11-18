@@ -10,9 +10,9 @@ const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, child
   };
 
   return (
-    <div 
-      id="modal" 
-      className="modal" 
+    <div
+      id="modal"
+      className="modal"
       style={styles.modal}
       onClick={handleOutsideClick}
     >
@@ -25,7 +25,7 @@ const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, child
           &times;
         </span>
         {children && <div style={styles.modalBody}>{children}</div>}
-        
+
         {imgSrc && (
           <img
             src={imgSrc}
@@ -35,13 +35,21 @@ const Modal = ({ isOpen, toggleModal, imgSrc, imgAlt, videoSrc, videoType, child
         )}
 
         {videoSrc && (
-          <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
-            <source src={videoSrc} type={videoType} />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            width="800"
+            height="400"
+            src={videoSrc}
+            title={styles.modalContent}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            style={{ maxWidth: '100%', borderRadius: '10px' }}
+          ></iframe>
         )}
 
-        
+
+
       </div>
     </div>
   );
@@ -61,7 +69,7 @@ const styles = {
     zIndex: 1000,
   },
   modalContent: {
-    width:'90%',
+    width: '90%',
     padding: '20px',
     borderRadius: '10px',
     maxWidth: '500px',

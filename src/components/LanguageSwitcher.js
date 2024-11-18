@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="container2">
+    <div className="container2 sidebar">
       <div className="tabs">
         <div className="language-selector">
           <input

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next'; 
+import { useTranslation } from 'react-i18next';
 import Modal from './Modal';
 import '../App.css';
 
@@ -35,15 +35,31 @@ const Projects = () => {
             {project.details.github_link.split('/').pop()}
           </a>
         </li>
-        <li
-          onClick={() => toggleModal(project.details.demo_link, project.name)}
-          style={{ cursor: 'pointer' }}
-        >
-          {t('Demo')}
-        </li>
+
+        {project.details.demo_link.includes("https://www.youtube.com/embed/") ? (
+          <li
+            onClick={() => toggleModal(project.details.demo_link, project.name)}
+          >
+            <h6 style={{ cursor: 'pointer', color: '#6262ea' }}>Demo</h6>
+          </li>
+        ) : (
+          <li>
+            <a
+              href={project.details.demo_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#6262ea', textDecoration: 'none' }}
+            >
+              <h6>Demo</h6>
+            </a>
+          </li>
+        )}
+
+
         <li>
           {project.details.team_size}
         </li>
+
         <li>
           {project.details.technical_stack.title}:
           <ul className="bullet-list">
@@ -52,6 +68,7 @@ const Projects = () => {
             <li>{t('Database')}: {project.details.technical_stack.database}</li>
           </ul>
         </li>
+
         <li>
           {project.details.features?.title}:
           <ul style={{ listStyleType: 'lower-alpha' }}>
@@ -60,6 +77,7 @@ const Projects = () => {
             ))}
           </ul>
         </li>
+
       </ol>
     </div>
   ));
