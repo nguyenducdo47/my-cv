@@ -12,7 +12,7 @@ const Resume = () => (
           <Sidebar />
         </div>
         <div className="col-12 col-md-9 resume-content" >
-          <div className="p-4" style={{ textAlign: 'justify'}}>
+          <div style={{ textAlign: 'justify'}}>
            
             <Objective />
             <Education />
