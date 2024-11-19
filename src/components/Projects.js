@@ -24,9 +24,10 @@ const Projects = () => {
       </h3>
       <p className='text-capitalize'><i>{project.description}</i></p>
       <ol>
-        <li>
+        <li className='break-word'>
           {t('Github link')}:&nbsp;
           <a
+          
             href={project.details.github_link}
             target="_blank"
             rel="noopener noreferrer"
@@ -36,13 +37,13 @@ const Projects = () => {
         </li>
 
         {project.details.demo_link.includes("https://www.youtube.com/embed/") ? (
-          <li
+          <li className='break-word'
             onClick={() => toggleModal(project.details.demo_link, project.name)}
           >
             <h6 style={{ cursor: 'pointer'}}>Demo: {project.details.demo_link}</h6>
           </li>
         ) : (
-          <li>
+          <li className='break-word'>
             <a
               href={project.details.demo_link}
               target="_blank"
