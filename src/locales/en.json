@@ -6,7 +6,7 @@
         "date_of_birth": "21/05/2001",
         "phone": "0899068281",
         "email": "nguyenducdo009@gmail.com",
-        "address": "Cao Lo Street, Ward 4, District 8, Ho Chi Minh City",
+        "address": "Cao Lo St, Ward 4, District 8, HCM city",
         "github": "nguyenducdo47",
         "avatar": "/images/avatar.jpg"
     },
@@ -55,7 +55,8 @@
     "skills": {
         "title": "Skills",
         "frontend": [
-            "ReactJS, TypeScript, VueJS",
+            "ReactJS, VueJS",
+            "TypeScript",
             "JavaScript",
             "JQuery, Ajax",
             "HTML, CSS (SCSS)",
@@ -63,13 +64,12 @@
             "Blade Template Laravel"
         ],
         "backend": [
-            "PHP Laravel",
+            "PHP (Laravel)",
             "NodeJS",
-            "ASP.NET Core API"
+            "C# (ASP.NET Core API)"
         ],
-        "programming_languages": [
+        "other_programming_languages": [
             "C++",
-            "C#",
             "Java (Spring Boot, JSP)"
         ],
         "database": [
@@ -78,6 +78,7 @@
             "MongoDB"
         ]
     },
+    "other_programming_languages": "Other Programming Languages",
     "tools": {
         "title": "Tools",
         "tool": [

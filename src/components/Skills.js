@@ -2,9 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
 
-  const skills = t('skills', { returnObjects: true }); 
+  const skills = t('skills', { returnObjects: true });
 
   return (
     <div>
@@ -14,9 +14,11 @@ const Skills = () => {
           category !== 'title' && (
             <li key={index} className="mt-2">
               <strong>
-                {category
-                  .replace(/_/g, ' ') 
-                  .replace(/\b\w/g, char => char.toUpperCase())}
+                {category === 'other_programming_languages'
+                  ? t('other_programming_languages')
+                  : category
+                      .replace(/_/g, ' ')
+                      .replace(/\b\w/g, char => char.toUpperCase())}
               </strong>
               <ul>
                 {skillsArray.map((skill, idx) => (

@@ -13,7 +13,7 @@ const Profile = () => {
       <ul className="list-unstyled">
         <li>
           <div className="d-flex">
-            <div>
+            <div className="mr-4">
               <strong><i className="fa-solid fa-cake-candles"></i></strong>&nbsp;
             </div>
             <div>{profile.date_of_birth}</div>
@@ -22,7 +22,7 @@ const Profile = () => {
 
         <li>
           <div className="d-flex">
-            <div>
+            <div className="mr-4">
               <strong><i className="fa-solid fa-phone"></i></strong>&nbsp;
             </div>
             <div>
@@ -33,7 +33,7 @@ const Profile = () => {
 
         <li>
           <div className="d-flex">
-            <div>
+            <div className="mr-4">
               <strong><i className="fa-solid fa-envelope"></i></strong>&nbsp;
             </div>
             <div>
@@ -46,8 +46,8 @@ const Profile = () => {
 
         <li>
           <div className="d-flex">
-            <div>
-              <strong><i className="fa-solid fa-address-book"></i></strong>&nbsp;
+            <div className="mr-4">
+              <strong><i className=" fa-solid fa-address-book"></i></strong>&nbsp;
             </div>
             <div>
               <a
@@ -62,7 +62,7 @@ const Profile = () => {
 
         <li>
           <div className="d-flex">
-            <div><strong><i className="fa-brands fa-github"></i></strong></div>&nbsp;
+            <div className="mr-4"><strong><i className="fa-brands fa-github"></i></strong></div>&nbsp;
             <div>
               <a href={`https://github.com/${profile.github}`} target="_blank" rel="noreferrer">
                 {profile.github}
