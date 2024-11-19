@@ -12,12 +12,12 @@
 }
 
 body {
-  font-family: Arial, sans-serif; /* Chọn font mặc định cho toàn bộ trang */
-  line-height: 1.6; /* Cài đặt line-height chuẩn cho thân trang */
+  font-family: 'Playfair Display', serif !important;
+  line-height: 1.6;
 
 }
 
 html {
-  font-size: 100%; /* Cài đặt font size mặc định */
+  font-size: 100%;
 }
 

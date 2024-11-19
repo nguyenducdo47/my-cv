@@ -7,7 +7,7 @@ const Tools = () => {
   const tools = t('tools', { returnObjects: true });
 
   return (
-    <div>
+    <div className='text-capitalize'>
       <h4 className="mt-4 text-primary">{tools.title}</h4>
       {Object.entries(tools).map(([category, toolsArray], index) => (
         category !== 'title' && (

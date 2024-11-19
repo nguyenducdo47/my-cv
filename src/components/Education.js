@@ -12,6 +12,7 @@ const Education = () => {
       <h2 className="mt-4 text-primary">{education.title}</h2>
       <p><strong>{education.university}</strong> ({education.years})</p>
       <p>{education.major}</p>
+      <p>GPA: {education.gpa}</p>
     </section>
   );
 };

@@ -6,7 +6,7 @@
         "date_of_birth": "21/05/2001",
         "phone": "0899068281",
         "email": "nguyenducdo009@gmail.com",
-        "address": "Cao Lo St, Ward 4, District 8, HCM city",
+        "address": "ward 4, district 8, HCM City",
         "github": "nguyenducdo47",
         "avatar": "/images/avatar.jpg"
     },
@@ -19,7 +19,8 @@
         "title": "Education",
         "university": "Saigon Technology University",
         "years": "2019 - Present",
-        "major": "Information Technology"
+        "major": "Information Technology",
+        "gpa":"3.0"
     },
     "work_experience": [
         {
@@ -40,7 +41,7 @@
             ]
         },
         {
-            "company": "Dich vu IT Kien Giang",
+            "company": "Kien Giang information technology services",
             "period": "05/2023 - 07/2023",
             "position": "Position: Intern Backend (ASP.NET, Automation Test)",
             "responsibilities": [
@@ -54,28 +55,40 @@
     ],
     "skills": {
         "title": "Skills",
-        "frontend": [
-            "ReactJS, VueJS",
-            "TypeScript",
-            "JavaScript",
-            "JQuery, Ajax",
-            "HTML, CSS (SCSS)",
-            "Bootstrap, TailwindCSS",
-            "Blade Template Laravel"
+        "frontend": {
+            "languages & markup": [
+                "JavaScript",
+                "TypeScript",
+                "HTML, CSS (SCSS)"
+            ],
+            "frameworks & libraries": [
+                "ReactJS",
+                "VueJS",
+                "Blade Template Laravel"
+            ],
+            "CSS Frameworks": [
+                "Bootstrap",
+                "TailwindCSS"
+            ]
+        },
+        "javascript_libraries & async": [
+            "JQuery",
+            "Ajax"
         ],
         "backend": [
             "PHP (Laravel)",
             "NodeJS",
-            "C# (ASP.NET Core API)"
-        ],
-        "other_programming_languages": [
-            "C++",
+            "C# (ASP.NET Core API)",
             "Java (Spring Boot, JSP)"
         ],
-        "database": [
+        "databases": [
             "MySQL",
             "SQL Server",
             "MongoDB"
+        ],
+        "other_programming_languages": [
+            "C++",
+            "Dart (Flutter)"
         ]
     },
     "other_programming_languages": "Other Programming Languages",
@@ -115,11 +128,40 @@
                 },
                 "features": {
                     "title": "Features",
-                    "feature": [
-                        "Product filtering, search, and comparison for customers.",
-                        "Account registration and login for users.",
-                        "Order management, tracking, and shopping cart features.",
-                        "Admin panel with functionalities like product, category, promotion, and user management."
+                    "customer_page": [
+                        "Login",
+                        "Register / Forgot password (Send a confirmation email to the email that the user had previously registered.)",
+                        "Logout",
+                        "View product information",
+                        "Search",
+                        "Add products to the cart",
+                        "Online payment via QR code (Momo, VNPAY)",
+                        "Rate products after purchase",
+                        "View order history",
+                        "Update personal information",
+                        "Change password"
+                    ],
+                    "admin_page": [
+                        "Revenue statistics",
+                        "Profit statistics",
+                        "Order statistics",
+                        "Customer statistics",
+                        "Employee statistics",
+                        "Top-selling products statistics",
+                        "Top-rated products statistics",
+                        "Manage customers",
+                        "Manage employees",
+                        "Manage categories",
+                        "Manage products",
+                        "Manage colors",
+                        "Manage sizes",
+                        "Manage brands",
+                        "Manage payment gateways",
+                        "Manage orders",
+                        "Website settings",
+                        "Update personal information",
+                        "Change password",
+                        "Logout"
                     ]
                 }
             }
@@ -147,12 +189,116 @@
                 },
                 "features": {
                     "title": "Features",
-                    "feature": [
-                        "Product filtering, search, and comparison for customers.",
-                        "Account registration and login for users.",
-                        "Order management, tracking, and shopping cart features.",
-                        "Admin panel with functionalities like product, category, promotion, and user management."
+                    "customer_page": [
+                        "Login",
+                        "Register",
+                        "Logout",
+                        "Forgot password",
+                        "Update personal information",
+                        "Change password",
+                        "View product information",
+                        "Search",
+                        "Filter products: Filter products by various criteria such as categories, brands, price range, etc.",
+                        "Product recommendations",
+                        "Compare products",
+                        "Add products to the cart",
+                        "Manage cart: Remove products, add or reduce product quantities in the cart.",
+                        "Manage favorite products: Customers can view, add, or remove their favorite products.",
+                        "Online payment via VNPAY or COD",
+                        "View order history",
+                        "Manage orders and track order statuses: Customers can cancel orders if they haven't been confirmed. Track order statuses like pending, shipping, delivered, canceled.",
+                        "View news: View articles about products, available promotions, etc."
+                    ],
+                    "admin_page": [
+                        "Revenue statistics (by day, month, year, or custom date range)",
+                        "Top-selling product statistics (by day, month, year)",
+                        "Order statistics",
+                        "Customer statistics",
+                        "Employee statistics",
+                        "Top-selling products statistics",
+                        "Manage customers",
+                        "Manage employees",
+                        "Manage categories",
+                        "Manage products",
+                        "Manage colors",
+                        "Manage sizes",
+                        "Manage brands",
+                        "Manage discount codes",
+                        "Manage posts",
+                        "Manage promotions",
+                        "Manage orders",
+                        "Manage classifications",
+                        "Update personal information",
+                        "Change password",
+                        "Logout"
                     ]
+                }
+            }
+        },
+        {
+            "name": "A movie streaming website where data is retrieved from an API.",
+            "description": "An online platform that allows users to explore and watch their favorite movies by retrieving data from an external API. This platform uses the API to provide detailed information about the movies, including the movie title, description, ratings, poster images, and other related details, helping users easily search for and watch movies online.",
+            "framework": "ReactJS",
+            "period": "05/2024 - 06/2024",
+            "details": {
+                "github_link": "https://github.com/nguyenducdo47/phimmoireactjs",
+                "demo_link": "https://phimreactjs.vercel.app/",
+                "team_size": "Team Size: 1 (self-study project, individual)",
+                "technical_stack": {
+                    "title": "Technical Stack",
+                    "framework": "ReactJS",
+                    "frontend": [
+                        "HTML",
+                        "CSS (SCSS)",
+                        "JavaScript"
+                    ],
+                    "database": "API KKphim"
+                },
+                "features": {
+                    "title": "Features",
+                    "customer_page": [
+                        "Fully responsive for all devices",
+                        "Save / Delete saved movie",
+                        "Save watched movies",
+                        "Search for movies",
+                        "Movie comments",
+                        "Sort movies by genre/country"
+                    ],
+                    "admin_page": []
+                }
+            }
+        },
+        {
+            "name": "A comic reading website with data retrieved from an API.",
+            "description": "An online platform that allows users to read and follow their favorite comic series. Comic data, including chapters, images, and related information, is retrieved from an API to ensure fast and accurate updates. Users can easily search, browse through genres, save their favorite series, and continue reading from where they left off. The platform supports reading on both mobile devices and desktops.",
+            "framework": "ReactJS",
+            "period": "06/2024 - 07/2024",
+            "details": {
+                "github_link": "https://github.com/nguyenducdo47/mangaver2",
+                "demo_link": "https://mangaver2.vercel.app/",
+                "team_size": "Team Size: 1 (self-study project, individual)",
+                "technical_stack": {
+                    "title": "Technical Stack",
+                    "framework": "ReactJS",
+                    "frontend": [
+                        "HTML",
+                        "CSS (SCSS)",
+                        "JavaScript"
+                    ],
+                    "database": "API Otruyen.cc"
+                },
+                "features": {
+                    "title": "Features",
+                    "customer_page": [
+                        "Fully responsive for all devices",
+                        "Categorize comics by genre",
+                        "Save/Delete reading history",
+                        "Search for comics",
+                        "Comment on comics",
+                        "Auto-scroll while reading",
+                        "Search comics by genre"
+                    ],
+                    "admin_page": []
                 }
             }
         }

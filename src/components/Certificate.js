@@ -23,16 +23,15 @@ const Certificate = () => {
   const certificates = data.certificate.slice(1);
 
   return (
-    <div>
+    <div className='text-capitalize'>
       <h4 className="mt-4 text-primary">{title}</h4>
       {certificates.length > 0 ? ( 
         <ul>
           {certificates.map((cert, index) => (
             <li key={index}>
-              <p
+              <p className='certificate'
                 style={{
                   cursor: 'pointer',
-                  color: '#6262ea',
                 }}
                 onClick={() => openModal(cert)}
               >

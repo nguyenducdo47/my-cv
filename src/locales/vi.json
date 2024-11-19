@@ -6,7 +6,7 @@
         "date_of_birth": "21/05/2001",
         "phone": "0899068281",
         "email": "nguyenducdo009@gmail.com",
-        "address": "Đường Cao Lỗ, P4, Q8, TP.HCM",
+        "address": "phường 4, quận 8, TP.HCM",
         "github": "nguyenducdo47",
         "avatar": "/images/avatar.jpg"
     },
@@ -19,7 +19,8 @@
         "title": "Học Vấn",
         "university": "Đại học Công Nghệ Sài Gòn",
         "years": "2019 - Hiện tại",
-        "major": "Công nghệ thông tin"
+        "major": "Công nghệ thông tin",
+        "gpa":"3.0"
     },
     "work_experience": [
         {
@@ -53,28 +54,40 @@
     ],
     "skills": {
         "title": "Kỹ năng",
-        "frontend": [
-            "ReactJS, VueJS",
-            "TypeScript",
-            "JavaScript",
-            "JQuery, Ajax",
-            "HTML, CSS (SCSS)",
-            "Bootstrap, TailwindCSS",
-            "Blade Template Laravel"
+        "frontend": {
+            "languages & markup": [
+                "JavaScript",
+                "TypeScript",
+                "HTML, CSS (SCSS)"
+            ],
+            "frameworks & libraries": [
+                "ReactJS",
+                "VueJS",
+                "Blade Template Laravel"
+            ],
+            "CSS Frameworks": [
+                "Bootstrap",
+                "TailwindCSS"
+            ]
+        },
+        "javascript_libraries & async": [
+            "JQuery",
+            "Ajax"
         ],
         "backend": [
             "PHP (Laravel)",
             "NodeJS",
-            "C# (ASP.NET Core API)"
-        ],
-        "other_programming_languages": [
-            "C++",
+            "C# (ASP.NET Core API)",
             "Java (Spring Boot, JSP)"
         ],
-        "database": [
+        "databases": [
             "MySQL",
             "SQL Server",
             "MongoDB"
+        ],
+        "other_programming_languages": [
+            "C++",
+            "Dart (Flutter)"
         ]
     },
     "other_programming_languages": "Ngôn ngữ Lập trình Khác",
@@ -113,12 +126,42 @@
                     "database": "MySQL"
                 },
                 "features": {
-                    "title": "Chức năng",
-                    "feature": [
-                        "Lọc, tìm kiếm và so sánh sản phẩm dành cho khách hàng.",
-                        "Đăng ký và đăng nhập tài khoản cho người dùng.",
-                        "Quản lý đơn hàng, theo dõi đơn hàng và chức năng giỏ hàng.",
-                        "Trang quản trị với các chức năng quản lý sản phẩm, danh mục, khuyến mãi và người dùng."
+                    "title": "Tính năng",
+                    "customer_page": [
+                        "Đăng nhập",
+                        "Đăng kí",
+                        "Đăng xuất",
+                        "Quên mật khẩu",
+                        "Xem thông tin sản phẩm",
+                        "Tìm kiếm",
+                        "Thêm sản phẩm vào giỏ hàng",
+                        "Thanh toán online qua quét mã QR momo, VNPAY",
+                        "Đánh giá sao sản phẩm sau khi mua hàng",
+                        "Xem lịch sử đơn hàng",
+                        "Thay đổi thông tin cá nhân",
+                        "Đổi mật khẩu"
+                    ],
+                    "admin_page": [
+                        "Thống kê doanh thu",
+                        "Thống kê lợi nhuận",
+                        "Thống kê đơn hàng",
+                        "Thống kê khách hàng",
+                        "Thống kê nhân viên",
+                        "Thống kê top sản phẩm bán chạy",
+                        "Thống kê top sản phẩm có lượt đánh giá nhiều",
+                        "Quản lý khách hàng",
+                        "Quản lý nhân viên",
+                        "Quản lý danh mục",
+                        "Quản lý sản phẩm",
+                        "Quản lý màu sắc",
+                        "Quản lý kích thước",
+                        "Quản lý thương hiệu",
+                        "Quản lý cổng thanh toán",
+                        "Quản lý đơn hàng",
+                        "Cài đặt website",
+                        "Đổi thông tin cá nhân",
+                        "Đổi mật khẩu",
+                        "Đăng xuất"
                     ]
                 }
             }
@@ -145,13 +188,117 @@
                     "database": "MySQL"
                 },
                 "features": {
-                    "title": "Chức năng",
-                    "feature": [
-                        "Lọc, tìm kiếm và so sánh sản phẩm dành cho khách hàng.",
-                        "Đăng ký và đăng nhập tài khoản cho người dùng.",
-                        "Quản lý đơn hàng, theo dõi đơn hàng và chức năng giỏ hàng.",
-                        "Trang quản trị với các chức năng quản lý sản phẩm, danh mục, khuyến mãi và người dùng."
+                    "title": "Tính năng",
+                    "customer_page": [
+                        "Đăng nhập",
+                        "Đăng kí",
+                        "Đăng xuất",
+                        "Quên mật khẩu",
+                        "Thay đổi thông tin cá nhân",
+                        "Đổi mật khẩu",
+                        "Xem thông tin sản phẩm",
+                        "Tìm kiếm",
+                        "Lọc sản phẩm: Lọc sản phẩm theo nhiều tiêu chí như danh mục, thương hiệu, mức giá,…",
+                        "Gợi ý sản phẩm",
+                        "So sánh sản phẩm",
+                        "Thêm sản phẩm vào giỏ hàng",
+                        "Quản lý giỏ hàng: Xóa sản phẩm, thêm hoặc giảm số lượng sản phẩm trong giỏ hàng.",
+                        "Quản lý các sản phẩm yêu thích: Khách hàng có thể xem, thêm hoặc xóa sản phẩm yêu thích của mình.",
+                        "Thanh toán online qua VNPAY hoặc COD",
+                        "Xem lịch sử đơn hàng",
+                        "Quản lý đơn hàng và theo dõi tình trạng đơn hàng: Khách hàng có thể hủy đơn hàng nếu đơn hàng đó chưa được xác nhận. Theo dõi tình trạng đơn hàng như đơn chờ xác nhận, đơn đang giao, đơn đã giao, đơn đã hủy.",
+                        "Xem tin tức: Xem các bài viết về sản phẩm, ưu đãi hiện có,…"
+                    ],
+                    "admin_page": [
+                        "Thống kê doanh thu (theo ngày, tháng, năm hoặc theo ngày tự chọn)",
+                        "Thống kê sản phẩm bán chạy (theo ngày, tháng, năm)",
+                        "Thống kê đơn hàng",
+                        "Thống kê khách hàng",
+                        "Thống kê nhân viên",
+                        "Thống kê top sản phẩm bán chạy",
+                        "Quản lý khách hàng",
+                        "Quản lý nhân viên",
+                        "Quản lý danh mục",
+                        "Quản lý sản phẩm",
+                        "Quản lý màu sắc",
+                        "Quản lý kích thước",
+                        "Quản lý thương hiệu",
+                        "Quản lý mã giảm giá",
+                        "Quản lý bài viết",
+                        "Quản lý mã khuyến mãi",
+                        "Quản lý đơn hàng",
+                        "Quản lý phân loại",
+                        "Đổi thông tin cá nhân",
+                        "Đổi mật khẩu",
+                        "Đăng xuất"
                     ]
+                }
+            }
+        },
+        {
+            "name": "Website xem phim dữ liệu được lấy từ api",
+            "description": "một nền tảng trực tuyến cho phép người dùng khám phá và xem các bộ phim yêu thích thông qua việc truy xuất dữ liệu từ một API bên ngoài. Nền tảng này sử dụng API để cung cấp thông tin chi tiết về các bộ phim, bao gồm tên phim, mô tả, đánh giá, hình ảnh poster, và các chi tiết liên quan khác, giúp người dùng dễ dàng tìm kiếm và xem phim trực tuyến.",
+            "framework": "ReactJS",
+            "period": "05/2024 - 06/2024",
+            "details": {
+                "github_link": "https://github.com/nguyenducdo47/phimmoireactjs",
+                "demo_link": "https://phimreactjs.vercel.app/",
+                "team_size": "Team Size: 1 (self-study project, individual)",
+                "technical_stack": {
+                    "title": "Technical Stack",
+                    "framework": "ReactJS",
+                    "frontend": [
+                        "HTML",
+                        "CSS (SCSS)",
+                        "JavaScript"
+                    ],
+                    "database": "API KKphim.vip"
+                },
+                "features": {
+                    "title": "Features",
+                    "customer_page": [
+                        "Đầy đủ đáp ứng cho tất cả các thiết bị",
+                        "Lưu/Xóa phim đã lưu",
+                        "Lưu phim đã xem",
+                        "Tìm kiếm phim",
+                        "Comment phim",
+                        "Sắp xếp phim theo thể loại/quốc gia"
+                    ],
+                    "admin_page": []
+                }
+            }
+        },
+        {
+            "name": "Website đọc truyện tranh dữ liệu được lấy từ api",
+            "description": "một nền tảng trực tuyến cho phép người dùng đọc và theo dõi các bộ truyện tranh yêu thích. Dữ liệu truyện tranh, bao gồm các chương, hình ảnh và thông tin liên quan, được lấy từ một API để đảm bảo việc cập nhật nhanh chóng và chính xác. Người dùng có thể dễ dàng tìm kiếm, duyệt qua các thể loại truyện, lưu lại bộ truyện yêu thích, và tiếp tục đọc từ nơi đã dừng. Nền tảng này hỗ trợ cả việc đọc truyện trên các thiết bị di động và máy tính để bàn.",
+            "framework": "ReactJS",
+            "period": "06/2024 - 07/2024",
+            "details": {
+                "github_link": "https://github.com/nguyenducdo47/mangaver2",
+                "demo_link": "https://mangaver2.vercel.app/",
+                "team_size": "Team Size: 1 (self-study project, individual)",
+                "technical_stack": {
+                    "title": "Technical Stack",
+                    "framework": "ReactJS",
+                    "frontend": [
+                        "HTML",
+                        "CSS (SCSS)",
+                        "JavaScript"
+                    ],
+                    "database": "API Otruyen.cc"
+                },
+                "features": {
+                    "title": "Features",
+                    "customer_page": [
+                        "Đầy đủ đáp ứng cho tất cả các thiết bị",
+                        "Phân loại truyện theo thể loại",
+                        "Lưu lại / Xóa lịch sử đọc truyện",
+                        "Tìm kiếm truyện",
+                        "Comment truyện",
+                        "Tự động cuộn khi đọc truyện",
+                        "Tìm truyện theo thể loại"
+                    ],
+                    "admin_page": []
                 }
             }
         }

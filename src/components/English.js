@@ -7,7 +7,7 @@ const English = () => {
   const english = t('english', { returnObjects: true });
 
   return (
-    <div>
+    <div className='text-capitalize'>
       <h4 className="mt-4 text-primary">{english.title}</h4>
       <ul>
         <li>{english.certification}</li>

@@ -26,13 +26,12 @@ const Projects = () => {
       <ol>
         <li>
           {t('Github link')}:&nbsp;
-          {project.github_link}
           <a
             href={project.details.github_link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {project.details.github_link.split('/').pop()}
+            {project.details.github_link}
           </a>
         </li>
 
@@ -40,7 +39,7 @@ const Projects = () => {
           <li
             onClick={() => toggleModal(project.details.demo_link, project.name)}
           >
-            <h6 style={{ cursor: 'pointer', color: '#6262ea' }}>Demo</h6>
+            <h6 style={{ cursor: 'pointer'}}>Demo: {project.details.demo_link}</h6>
           </li>
         ) : (
           <li>
@@ -48,13 +47,12 @@ const Projects = () => {
               href={project.details.demo_link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: '#6262ea', textDecoration: 'none' }}
+              style={{ textDecoration: 'none' }}
             >
-              <h6>Demo</h6>
+              <h6>Demo: {project.details.demo_link}</h6>
             </a>
           </li>
         )}
-
 
         <li>
           {project.details.team_size}
@@ -71,11 +69,53 @@ const Projects = () => {
 
         <li>
           {project.details.features?.title}:
-          <ul style={{ listStyleType: 'lower-alpha' }}>
-            {(Array.isArray(project.details.features?.feature) ? project.details.features.feature : []).map((feature, idx) => (
-              <li key={idx}>{feature}</li>
-            ))}
-          </ul>
+
+          {(() => {
+            const hasCustomerPage = project.details.features.customer_page.length > 0;
+            const hasAdminPage = project.details.features.admin_page.length > 0;
+
+            if (hasCustomerPage && hasAdminPage) {
+              return (
+                <ul style={{ listStyleType: 'lower-alpha' }}>
+                  {hasCustomerPage && (
+                    <>
+                      <li>{t('Customer page features')}:</li>
+                      <ul style={{ listStyleType: 'disc' }}>
+                        {project.details.features.customer_page.map((feature, idx) => (
+                          <li key={idx}>{feature}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {hasAdminPage && (
+                    <>
+                      <li>{t('Admin page features')}:</li>
+                      <ul style={{ listStyleType: 'disc' }}>
+                        {project.details.features.admin_page.map((feature, idx) => (
+                          <li key={idx}>{feature}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </ul>
+              );
+            } else if (hasCustomerPage || hasAdminPage) {
+              return (
+                <ul style={{ listStyleType: 'disc' }}>
+                  {hasCustomerPage &&
+                    project.details.features.customer_page.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  {hasAdminPage &&
+                    project.details.features.admin_page.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                </ul>
+              );
+            } else {
+              return null;
+            }
+          })()}
         </li>
 
       </ol>
