@@ -31,7 +31,7 @@ const LanguageSwitcher = () => {
             onChange={handleLanguageChange}
             checked={language === 'en'} 
           />
-          <label className="tab" htmlFor="radio-en">{t('Eng')}</label>
+          <label className="tab" htmlFor="radio-en">{t('ENG')}</label>
 
           <input
             type="radio"
