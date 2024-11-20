@@ -62,7 +62,7 @@ const Projects = () => {
         <li>
           {project.details.technical_stack.title}:
           <ul className="bullet-list">
-            <li>{t('Framework')}: {project.details.technical_stack.framework}</li>
+            <li>{t('Framework / Library')}: {project.details.technical_stack.framework}</li>
             <li>{t('Frontend')}: {project.details.technical_stack.frontend.join(', ')}</li>
             <li>{t('Database')}: {project.details.technical_stack.database}</li>
           </ul>
